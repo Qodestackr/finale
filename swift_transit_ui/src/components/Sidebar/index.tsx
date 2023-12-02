@@ -10,8 +10,10 @@ import {
   Stack,
   Text,
   Title,
-  // Input 
+  // Input
 } from "@mantine/core";
+import { Input } from "@mantine/core";
+
 import { DateRangePicker } from "@mantine/dates";
 import SliderLabel from "./SliderLabel";
 
@@ -157,23 +159,20 @@ const Sidebar = ({
               <form onSubmit={handleSubmit}>
                 <Stack spacing="xl">
                   {/* Start Location Input */}
-                  <input
-                    type="text"
-                    // label="Start Location"
-                    placeholder="Enter start location"
+                  <Input
+                    placeholder="Start location"
                     value={startLocation}
                     onChange={(e) => setStartLocation(e.target.value)}
                   />
 
                   {/* End Location Input */}
-                  <input
+                  <Input
                     type="text"
                     // label="End Location"
                     placeholder="Enter end location"
                     value={endLocation}
                     onChange={(e) => setEndLocation(e.target.value)}
                   />
-                  
                   {/* Date Range Picker */}
                   <DateRangePicker
                     icon={<IconCalendar size={16} />}
