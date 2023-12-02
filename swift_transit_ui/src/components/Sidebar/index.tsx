@@ -10,6 +10,7 @@ import {
   Stack,
   Text,
   Title,
+  // Input 
 } from "@mantine/core";
 import { DateRangePicker } from "@mantine/dates";
 import SliderLabel from "./SliderLabel";
@@ -41,6 +42,8 @@ const Sidebar = ({
 }: SidebarProps) => {
   const [opened, setOpened] = useState(false);
   const [error, setError] = useState("");
+  const [startLocation, setStartLocation] = useState("");
+  const [endLocation, setEndLocation] = useState("");
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -76,7 +79,7 @@ const Sidebar = ({
         smallerThan="xs"
         styles={{
           width: "100%",
-          overflow: "scroll"
+          overflow: "scroll",
         }}
       >
         <Drawer
@@ -89,7 +92,6 @@ const Sidebar = ({
         >
           <Stack justify="space-between" sx={{ height: "100%" }}>
             <Box>
- 
               <Text
                 align="center"
                 sx={{
@@ -107,12 +109,13 @@ const Sidebar = ({
                   marginBottom: "2rem",
                 }}
                 style={{
-                  color: 'green'
+                  color: "green",
                 }}
               >
                 Search, Filter, and Plan Trip
               </Title>
-              <form onSubmit={handleSubmit}>
+
+              {/* <form onSubmit={handleSubmit}>
                 <Stack spacing="xl">
                   <SliderLabel
                     id="min-mag-slider"
@@ -149,7 +152,53 @@ const Sidebar = ({
                     </Button>
                   </Center>
                 </Stack>
+              </form> */}
+
+              <form onSubmit={handleSubmit}>
+                <Stack spacing="xl">
+                  {/* Start Location Input */}
+                  <input
+                    type="text"
+                    // label="Start Location"
+                    placeholder="Enter start location"
+                    value={startLocation}
+                    onChange={(e) => setStartLocation(e.target.value)}
+                  />
+
+                  {/* End Location Input */}
+                  <input
+                    type="text"
+                    // label="End Location"
+                    placeholder="Enter end location"
+                    value={endLocation}
+                    onChange={(e) => setEndLocation(e.target.value)}
+                  />
+                  
+                  {/* Date Range Picker */}
+                  <DateRangePicker
+                    icon={<IconCalendar size={16} />}
+                    label="Date Range"
+                    description="Select dates for a Trip"
+                    placeholder="Pick dates range"
+                    inputFormat="YYYY-MM-DD"
+                    zIndex={1000}
+                    value={dateRange}
+                    onChange={setDateRange}
+                  />
+
+                  {/* Search Button */}
+                  <Center>
+                    <Button
+                      type="submit"
+                      fullWidth
+                      leftIcon={<IconSearch size={16} />}
+                    >
+                      Search Routes
+                    </Button>
+                  </Center>
+                </Stack>
               </form>
+
               <Center>
                 <Text
                   style={{
