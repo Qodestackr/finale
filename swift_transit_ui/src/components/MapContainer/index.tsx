@@ -8,6 +8,24 @@ import ColorLegend from "../ColorLegend";
 import { Box, LoadingOverlay, MediaQuery } from "@mantine/core";
 import { useState } from "react";
 
+
+const routeGeoJSON = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [36.8219, -1.1601],
+          [36.8219, -1.2921],
+        ],
+      },
+    },
+  ],
+};
+
 interface MapProps {
   data: Array<earthquake>;
   center: LatLngTuple;
