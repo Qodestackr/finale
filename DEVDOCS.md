@@ -93,3 +93,7 @@ export default App;
 You can customize the style of the GeoJSON route by adjusting the style prop in the GeoJSON component. Customize the color, weight, opacity, etc., to match your preferences.
 
 This is a basic example to get you started. Depending on your specific requirements and the complexity of your route data, you might need to add more features or customization.
+
+
+
+https://codepen.io/swatchai/pen/BaadyNd
