@@ -1,0 +1,41 @@
+## DEVELOPMENT
+- SETUP REACT QUERY AND AXIOS EFFICIENTLY
+- SETUP GOOGLE ANALYTICS AND SENTRY 
+-SETUP PWA EFFICIENTLY
+
+- BUILD THE SIDE NAV/PANEL
+
+- MAKE SIDE PANEL/ ON THE LEFT RESPONSIVE 
+
+## FEATURES
+MAP SETTINGS:
+- Map Style: Streets/ Aerials
+
+PLAN A TRIP
+
+FIGURE OUT HOW TO TRACK IN REAL-TIME
+
+## FUTURE SCOPE
+
+SUSTAINABLE: WEATHER, GEE, SPATIAL : REAL-TIME UPDATES
+GAMIFICATION
+
+
+## PERFORMANCE
+
+- CODE SPLITTING , FOR LARGE COMPONENTS IS CRUCIAL
+
+
+
+ROUTES AND LOCATIONS
+
+- Add Locations You wanna Visit
+- Plan 
+- Etc
+
+<!-- github.com:zurkon/quakesentry -->
+
+
+ADMIN SECTIONS:
+- User : Travel History, Visualize Plan Trip, User Related Actions, Propose Routes etc...
+- SUPER ADMIN : Ads new Routes, Push Notifications section on various updates, etc...

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+
+    <style>
+        #map-id {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0
+        }
+
+        #map-id:before {
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        h1::before {
+            /* content: 'Hello World'; */
+            color: #FFF;
+            position: absolute;
+            left: 100px;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map-id">
+        <h1>Hello</h1>
+    </div>
+</body>
+
+<script>
+    var mymap = L.map('map-id').setView([51.505, -0.09], 13);
+
+    //initialize a tile map
+    L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png',
+        { attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>' })
+        .addTo(mymap);
+</script>
+
+</html>
